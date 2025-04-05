@@ -6,6 +6,5 @@ foreach ($volume in $volumes) {
     $driveLetter = $volume.DriveLetter + ":"
     Write-Host "Checking BitLocker status for volume: $driveLetter"
     
-    # Execute manage-bde command to check BitLocker status
     manage-bde -status $driveLetter
 }
